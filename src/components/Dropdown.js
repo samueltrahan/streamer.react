@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
-import DropdownElements from './DropdownElements'
+import DropdownElements from './DropElements'
 import './Dropdown.css'
 
-const Dropdown = () => {
-  const [streamer, setStreamer] = useState('')
+const Dropdown = ({setStreamer}) => {
+ 
 
 
-  const handleStreamerSubmit = (event, names) => {
-    event.preventDefault();
-    setStreamer(names)
-  }
+ 
   
+ 
 
 
   return (
@@ -20,7 +18,7 @@ const Dropdown = () => {
     Dropdown
     <i className="dropdown icon"></i>
     <div className="menu">
-     <DropdownElements handleStreamerSubmit={handleStreamerSubmit}/>
+     <DropdownElements  setStreamer={setStreamer}/>
     </div>
   </div>
 </div>
