@@ -1,3 +1,8 @@
 .navbar {
-  background-color: rgb(230, 90, 90)
+  background-color:black;
+  height: 90px;
+}
+
+.streamer-logo {
+  width: 90px;
 }
