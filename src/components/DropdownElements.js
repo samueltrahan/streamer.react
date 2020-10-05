@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {STREAMERS} from '../constants'
 
-export default function DropdownElements() {
+export default function DropdownElements({handleStreamerSubmit}) {
+
+  
+
   return (
     <div>
       {STREAMERS.map(streamer => (
-        <div className="item">{streamer}</div>
+        <span className="item">{streamer}</span>
       ))}
     </div>
   )

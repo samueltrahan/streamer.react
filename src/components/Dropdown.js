@@ -5,6 +5,11 @@ import './Dropdown.css'
 const Dropdown = () => {
   const [streamer, setStreamer] = useState('')
 
+
+  const handleStreamerSubmit = (event, names) => {
+    event.preventDefault();
+    setStreamer(names)
+  }
   
 
 
@@ -15,7 +20,7 @@ const Dropdown = () => {
     Dropdown
     <i className="dropdown icon"></i>
     <div className="menu">
-     <DropdownElements />
+     <DropdownElements handleStreamerSubmit={handleStreamerSubmit}/>
     </div>
   </div>
 </div>
