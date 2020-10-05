@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
+import DropdownElements from './DropdownElements'
 import './Dropdown.css'
 
 const Dropdown = () => {
+  const [streamer, setStreamer] = useState('')
+
+  
+
+
   return (
     <>
     <div className="ui compact menu">
@@ -9,9 +15,7 @@ const Dropdown = () => {
     Dropdown
     <i className="dropdown icon"></i>
     <div className="menu">
-      <div className="item">Choice 1</div>
-      <div className="item">Choice 2</div>
-      <div className="item">Choice 3</div>
+     <DropdownElements />
     </div>
   </div>
 </div>
