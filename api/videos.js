@@ -3,7 +3,7 @@ const key = process.env.API_KEY;
 
 
 function getVideos(req, res) {
-axios.get(`https://www.googleapis.com/youtube/v3/search/?part=snippet&type=video&maxResults=5&q=${req.query.q}&key=${key}`)
+axios.get(`https://www.googleapis.com/youtube/v3/search/?part=snippet&type=video&maxResults=5&q=${req.query.streamer}&key=${key}`)
 .then((response) => {
   res.send(response.data);
 })
