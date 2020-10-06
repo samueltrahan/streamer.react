@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import VideoList from './components/VideoList/VideoList'
+import VideoDisplay from './components/VideosDisplay/VideosDisplay'
 import axios from "axios";
 import './App.css'
 
@@ -18,6 +19,7 @@ const App = () => {
         },
       })
       .then((response) => {
+        console.log(response.data.items)
         setVideo(response.data.items);
       })
       .catch((err) => console.log(err));
@@ -29,6 +31,7 @@ const App = () => {
     <>
       <NavBar getStreamers={getStreamers} />
       {/* <VideoList video={video}/> */}
+      <VideoDisplay video={video}/>
     </>
   );
 };
