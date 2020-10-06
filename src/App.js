@@ -1,16 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
+import axios from "axios";
 
 const App = () => {
   const [videos, setVideos] = useState([]);
   const [tweets, setTweets] = useState([]);
-  const [streamer, setStreamer] = useState('')
+  const [streamer, setStreamer] = useState("");
 
-  console.log(streamer)
+  const getStreamers = (event, streamer) => {
+    event.preventDefault()
+    axios
+      .get("/api/videos", {
+        params: {
+          q: streamer,
+        },
+      })
+      .then((response) => {
+        console.log(response.data.items);
+        setVideos(response.data.items);
+      })
+      .catch((err) => console.log(err));
+  }
+
 
   return (
     <>
-      <NavBar setStreamer={setStreamer}/>
+      <NavBar getStreamers={getStreamers} />
     </>
   );
 };
