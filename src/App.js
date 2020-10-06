@@ -8,11 +8,11 @@ const App = () => {
   const [streamer, setStreamer] = useState("");
 
   const getStreamers = (event, streamer) => {
-    event.preventDefault()
+    event.preventDefault();
     axios
-      .get("/api/videos", {
+      .get("/videos", {
         params: {
-          q: streamer,
+          streamer: streamer,
         },
       })
       .then((response) => {
@@ -20,8 +20,7 @@ const App = () => {
         setVideos(response.data.items);
       })
       .catch((err) => console.log(err));
-  }
-
+  };
 
   return (
     <>
