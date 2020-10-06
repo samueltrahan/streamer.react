@@ -1,4 +1,5 @@
 import React from "react";
+import './VideoList.css'
 
 export default function VideoList({ video }) {
   if (!video) {
@@ -9,11 +10,11 @@ export default function VideoList({ video }) {
 
   return (
     <div>
-      <div className="ui embed">
-        <iframe title="video-player" src={videoSrc}></iframe>
+      <div>
+        <iframe className="video" title="video-player" src={videoSrc}></iframe>
       </div>
-      <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
+      <div>
+        <h4 className="video-header">{video.snippet.title}</h4>
       </div>
     </div>
   );

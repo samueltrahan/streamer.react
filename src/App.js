@@ -19,6 +19,7 @@ const App = () => {
         },
       })
       .then((response) => {
+        console.log(response.data.items)
         setVideo(response.data.items);
         setSelectedVideo(response.data.items[0])
       })
