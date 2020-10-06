@@ -8,9 +8,10 @@ const App = () => {
   const [streamer, setStreamer] = useState("");
 
   const getStreamers = (event, streamer) => {
+    console.log(streamer)
     event.preventDefault();
     axios
-      .get("/videos", {
+      .get("/api/videos", {
         params: {
           streamer: streamer,
         },
