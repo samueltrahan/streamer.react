@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function VideoList({videos}) {
-  if (!videos) {
+export default function VideoList({video}) {
+  if (!video) {
     return <div>Loading...</div>;
   }
 
-  const videoSrc = `https://www.youtube.com/embed/${videos.id.videoId}`
+  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
 
   return (
     <div>
@@ -13,7 +13,7 @@ export default function VideoList({videos}) {
         <iframe title="video-player" src={videoSrc}></iframe>
       </div>
       <div className="ui segment">
-  <h4 className="ui header">{videos.snippet.title}</h4>
+  <h4 className="ui header">{video.snippet.title}</h4>
       </div>
     </div>
   )

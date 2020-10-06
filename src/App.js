@@ -5,7 +5,7 @@ import axios from "axios";
 import './App.css'
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
+  const [video, setVideo] = useState([]);
   const [tweets, setTweets] = useState([]);
   const [streamer, setStreamer] = useState("");
 
@@ -18,7 +18,7 @@ const App = () => {
         },
       })
       .then((response) => {
-        setVideos(response.data.items);
+        setVideo(response.data.items);
       })
       .catch((err) => console.log(err));
   };
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <>
       <NavBar getStreamers={getStreamers} />
-      <VideoList videos={videos}/>
+      {/* <VideoList video={video}/> */}
     </>
   );
 };
