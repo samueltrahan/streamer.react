@@ -57,6 +57,6 @@ const STREAMERS = [
   },
 ];
 
-const DROPDOWNSTREAMERS = ['NICKMERCS', 'scump', 'timthetatman', 'cloakzy', 'Aydan', 'Mutex' , 'HusKerrs', 'CouRageJD', 'Nadeshot Plays', 'Speros', 'Dr. Disrespect']
+const DROPDOWNSTREAMERS = ['NICKMERCS', 'scump', 'timthetatman', 'cloakzy', 'Aydan', 'MuTeX' , 'HusKerrs', 'CouRageJD', 'Nadeshot Plays', 'Speros', 'drdisrespect']
 
 export { STREAMERS, DROPDOWNSTREAMERS };

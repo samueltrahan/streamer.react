@@ -1,5 +1,6 @@
 .video-item.item img {
-  max-width: 180px;
+  max-width: 500px;
+  color: white;
 }
 
 .video-item {
@@ -10,5 +11,9 @@
 }
 
 .header {
+  color: white;
+}
+
+alt {
   color: white;
 }
