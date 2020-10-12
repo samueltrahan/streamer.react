@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import VideoList from './components/VideoList/VideoList'
 import VideoDisplay from './components/VideosDisplay/VideosDisplay'
+import Tweets from './components/Tweets/Tweets'
 import axios from "axios";
 import './App.css'
 
@@ -35,6 +36,7 @@ const App = () => {
       <NavBar getStreamers={getStreamers} />
       <VideoList video={selectedVideo}/>
       <VideoDisplay video={video} onVideoSelect={onVideoSelect}/>
+      <Tweets />
     </>
   );
 };
