@@ -11,7 +11,7 @@ export default function Tweets() {
     <Timeline 
     dataSource={{
       sourceType: 'profile',
-      screenName: 'scump'
+      screenName: ''
     }}
     options={{
       width: '40vw',
