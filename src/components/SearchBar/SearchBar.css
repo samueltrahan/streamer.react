@@ -1,0 +1,26 @@
+.search-bar {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+label {
+  text-align: center;
+}
+
+.field {
+  display: flexbox;
+  text-align: center;
+}
+
+button {
+  color: gold;
+}
+
+#input {
+  width: 500px;
+  height: 20px;
+  margin-bottom: 10px;
+}
