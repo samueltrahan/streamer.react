@@ -34,22 +34,28 @@ const App = () => {
     setSelectedVideo(video)
   }
 
+  let haveStreamers = streamer ? (
+ 
+    <div className="home-page">
+    <div className="videos-hp">
+  <VideoList video={selectedVideo}/>
+  <VideoDisplay video={video} onVideoSelect={onVideoSelect}/>
+    </div>
+    <div className="tweets-hp">
+  <Tweets streamer={streamer}/>
+    </div>
+  </div>
+    
+  ) : (
+  
+    <SearchBar />
+  )
+
   return (
     <Router>
       <NavBar getStreamers={getStreamers} />
-      <Route exact path="/search" render={(location) => (
-        <SearchBar location={location}/>
-      )}>
-      </Route>
-      <div className="home-page">
-        <div className="videos-hp">
-      <VideoList video={selectedVideo}/>
-      <VideoDisplay video={video} onVideoSelect={onVideoSelect}/>
-        </div>
-        <div className="tweets-hp">
-      <Tweets streamer={streamer}/>
-        </div>
-      </div>
+     
+    {haveStreamers}
     </Router>
   );
 };
