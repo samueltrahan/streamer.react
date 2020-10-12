@@ -48,7 +48,7 @@ const App = () => {
     
   ) : (
   
-    <SearchBar />
+    <SearchBar getStreamers={getStreamers}/>
   )
 
   return (

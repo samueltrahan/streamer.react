@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import "./SearchBar.css";
 
 
-export default function SearchBar() {
+export default function SearchBar({getStreamers}) {
+    const [searchTerm, setSearchTerm] = useState('')
+
+
+   const onInputChange = (event) => {
+    setSearchTerm(event.target.value)
+   }
+  
   return (
    <>
 <div className="search-bar">
@@ -10,11 +17,12 @@ export default function SearchBar() {
           <div>
             <form
               className="field"
-       
+              onSubmit={(event) => getStreamers(event, searchTerm)}
             >
               <label>Search for a Streamer</label>
               <input
                 id="input"
+                onChange={onInputChange}
                 className="input"
                 type="text"
                 placeholder="Search Streamers"
