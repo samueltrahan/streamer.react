@@ -1,23 +1,24 @@
 import React, {useState} from "react";
 import { STREAMERS } from '../../constants';
+import {Timeline} from 'react-twitter-widgets'
 
-export default function Tweets({streamer}) {
+export default function Tweets() {
 
   
 
   return (
     <div>
-      <a
-        class="twitter-timeline"
-        href={`https://twitter.com/?${STREAMERS}ref_src=twsrc%5Etfw`}
-      >
-        Stream of Tweets
-      </a>{" "}
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-       ></script>
+    <Timeline 
+    dataSource={{
+      sourceType: 'profile',
+      screenName: 'NICKMERCS'
+    }}
+    options={{
+      width: '40vw',
+      height: '1000'
+    }}
+    />
+     
     </div>
   );
 }
