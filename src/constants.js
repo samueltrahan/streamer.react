@@ -10,10 +10,10 @@ const STREAMERS = [
       twitchName: "scump",
       youtubeName: "scump",
     },
-    Cloaksy: {
-      twitterName: "cloaksy",
-      twitchName: "cloaksy",
-      youtubeName: "cloaksy",
+    Cloakzy: {
+      twitterName: "cloakzy",
+      twitchName: "cloakzy",
+      youtubeName: "cloakzy",
     },
     TimTheTatman: {
       twitterName: "timthetatman",
@@ -57,6 +57,6 @@ const STREAMERS = [
   },
 ];
 
-const DROPDOWNSTREAMERS = ['NICKMERCS', 'scump', 'timthetatman', 'cloaksy', 'Aydan', 'Mutex' , 'HusKerrs', 'CouRageJD', 'Nadeshot Plays', 'Speros', 'Dr. Disrespect']
+const DROPDOWNSTREAMERS = ['NICKMERCS', 'scump', 'timthetatman', 'cloakzy', 'Aydan', 'Mutex' , 'HusKerrs', 'CouRageJD', 'Nadeshot Plays', 'Speros', 'Dr. Disrespect']
 
 export { STREAMERS, DROPDOWNSTREAMERS };

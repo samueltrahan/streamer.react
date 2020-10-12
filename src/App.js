@@ -8,7 +8,7 @@ import './App.css'
 
 const App = () => {
   const [video, setVideo] = useState([]);
-  const [tweets, setTweets] = useState([]);
+  const [streamer, setStreamer] = useState('')
   const [selectedVideo, setSelectedVideo] = useState(null)
 
   const getStreamers = (event, streamer) => {
@@ -20,12 +20,13 @@ const App = () => {
         },
       })
       .then((response) => {
-        console.log(response.data.items)
+        setStreamer(streamer)
         setVideo(response.data.items);
         setSelectedVideo(response.data.items[0])
       })
       .catch((err) => console.log(err));
-  };
+    };
+    
 
  const onVideoSelect = (video) => {
     setSelectedVideo(video)
@@ -34,9 +35,15 @@ const App = () => {
   return (
     <>
       <NavBar getStreamers={getStreamers} />
+      <div className="home-page">
+        <div className="videos-hp">
       <VideoList video={selectedVideo}/>
       <VideoDisplay video={video} onVideoSelect={onVideoSelect}/>
-      <Tweets />
+        </div>
+        <div className="tweets-hp">
+      <Tweets streamer={streamer}/>
+        </div>
+      </div>
     </>
   );
 };
