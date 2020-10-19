@@ -4,7 +4,7 @@ Date: 10/19/20
 
 #### [LinkedIn](https://www.linkedin.com/in/samueltrahan/)
 
-##Description
+## Description
 
 Streamer is a React application made to search for your favorite streamers on youtube.  You may also be able to see their live tweets.
 
@@ -23,8 +23,8 @@ Some streamers are set because those are the streamers that I enjoy watching but
 - [ ] Add in streamers twitch stream.
   
 ## Credits
-Youtube API
-Twitter API
-Semantic UI
-Materialize UI
+Youtube API<br/>
+Twitter API<br/>
+Semantic UI<br/>
+Materialize UI<br/>
 
