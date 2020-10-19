@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { STREAMERS } from '../../constants';
 import {Timeline} from 'react-twitter-widgets'
 
 export default function Tweets({streamer}) {
