@@ -8,7 +8,7 @@ Date: 10/19/20
 
 Streamer is a React application made to search for your favorite streamers on youtube.  You may also be able to see their live tweets.
 
-The app is deploy using Vercel and can be found [here](https://streamer-62w1q7j4l.vercel.app/)
+The app is deployed using Vercel and can be found [here](https://streamer-62w1q7j4l.vercel.app/)
 ---
 
 ## Getting Started
